@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/**======================================================================
+=========================================================================
+Template Name: Dashboard Notas Fiscais - UC (Projeto Ficticio
+Author: Suami Rocha
+Support: suporte@suamirocha.com.br
+File: style.css
+=========================================================================
+=================================================================================== */
+/*!
+ * Bootstrap v5.3.2 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+ :root {
+  --bs-blue: #7267EF;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #e83e8c;
+  --bs-red: #EA4D4D;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffa21d;
+  --bs-green: #17C666;
+  --bs-teal: #20c997;
+  --bs-cyan: #3ec9d6;
+  --bs-white: #ffffff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #7267EF;
+  --bs-secondary: #6c757d;
+  --bs-success: #17C666;
+  --bs-info: #3ec9d6;
+  --bs-warning: #FF6600;
+  --bs-danger: #EA4D4D;
+  --bs-light: #f8f9fa;
+  --bs-dark: #1c232f;
+  --bs-nav-pills-link-active-bg: #FF6600;
+  --bs-font-sans-serif: "Inter", sans-serif;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+
+  /* Paleta de cores UC  */
+  --verde-escuro: #04252A;
+  --laranja: #FF6600;
+  --vermelho: #DE283B;
+  --dark1: #2B2B36;
+  --cinza1: #87888C;
+  --preto: #000000;
+  --azul: #20AEF3;
+  --linha-laranja: rgba(255, 102, 0, 0.14);
+  --placeholder-search: #D2D2D2
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--bs-white);
+  background-color: var(--verde-escuro);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+  list-style: none; 
+  padding-top: 1rem;
+}
+h1 {
+  font-size:1.44rem;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--bs-white);
+}
+h2, h3, h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--cinza1);
+}
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bs-white);
+}

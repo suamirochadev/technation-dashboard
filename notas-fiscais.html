@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Notas Fiscais - UC</title>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Dashboard feito com Bootstrap 5 e ChartJS, UI criada por mim. Baixe esse template diretamente pelo meu ko-fi e use em seus projetos futuros.
+    Dashboard desenvolvido por Suami Rocha (suamirocha.com.br) para a UC (Projeto Ficticio).
+    "
+    />
+    <meta
+      name="keywords"
+      content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template"
+    />
+    <meta name="author" content="Suami Rocha suamirocha.com.br" />
+    <!-- cdns -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    
+    <!-- Links Css -->
+    <link
+      rel="stylesheet"
+      href="/assets/css/style.css"
+      id="main-style-link-css"
+    />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/nav-esquerda.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="notas-fiscais.css">
+
+    <!-- favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- fonts css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Inicio Nav-Esquerda -->
+    <div class="area"></div>
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="/">
+            <img
+              class="fa fas-2x menu-icon"
+              src="/assets/images/favicon.svg"
+              alt
+            />
+            <span class="nav-text">
+              Visite nosso site
+            </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="/">
+            <img
+              class="fa fa-2x menu-icon"
+              src="/assets/images/Icons-menu/dashboard.svg"
+              alt
+            />
+            <span class="nav-text">
+              Dashboard
+            </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="/notas-fiscais.html">
+            <img
+              class="fa fa-2x menu-icon"
+              src="/assets/images/Icons-menu/notasFiscais.svg"
+              alt
+            />
+            <span class="nav-text">
+              Notas Fiscais
+            </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <img
+              class="fa fa-2x"
+              src="/assets/images/Icons-menu/aVencer.svg"
+              alt
+            />
+            <span class="nav-text">
+              A Vencer
+            </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <img
+              class="fa fa-2x"
+              src="/assets/images/Icons-menu/pagamentos.svg"
+              alt
+            />
+            <span class="nav-text">
+              Pagamentos
+            </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <img
+              class="fa fa-2x"
+              src="/assets/images/Icons-menu/ajuda.svg"
+              alt
+            />
+            <span class="nav-text">
+              Ajuda
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="fa fa-2x"
+              src="/assets/images/Icons-menu/historico.svg"
+              alt
+            />
+            <span class="nav-text">
+              Histórico
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Fim Nav-Esquerda -->
+
+    <!-- Inicio Header -->
+    <header>
+      <div
+        class="container-sm search-bar d-flex align-items-center justify-content-center"
+      >
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Procure sua nota fiscal aqui..."
+        />
+        <img
+          src="/assets/images/search/icon-search.svg"
+          class="fa-search"
+          alt="Lupa"
+        />
+      </div>
+      <div class="brand-logo">
+        <img src="/assets/images/favicon.svg" alt />
+      </div>
+      <div class="user-menu">
+        <span class="alerta"> </span>
+        <span class="ping"></span>
+        <i class="fas fa-bell notification-icon"></i>
+        <div class="user-photo">
+          <img src="/assets/images/Profile.png" alt="User Photo" />
+        </div>
+        <div onclick="toggleUserDropdown()">
+          <img
+            class="seta-baixo"
+            src="/assets/images/menu-user/arrow-drop.svg"
+            alt="Seta pra baixo"
+          />
+        </div>
+        <div class="user-dropdown" id="userDropdown">
+          <a href="#">
+            <img
+              class="icon-drop"
+              src="/assets/images/menu-user/profile.svg"
+              alt
+            />
+            Perfil</a
+          >
+          <a href="#">
+            <img
+              class="icon-drop"
+              src="/assets/images/menu-user/favorito.svg"
+              alt
+            />
+            Favorito</a
+          >
+          <a href="#">
+            <img
+              class="icon-drop"
+              src="/assets/images/menu-user/configurar.svg"
+              alt
+            />
+            Configurações</a
+          >
+          <a href="#">
+            <img
+              class="icon-drop"
+              src="/assets/images/menu-user/sair.svg"
+              alt
+            />
+            Sair</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Fim Header -->
+
+    <!-- Main Notas Fiscais -->
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="container bg-black p-3 rounded-4 row justify-content-between">
+          <div class="card bg-black col-md-5">
+            <div class="card-header">
+              <h1>Notas Fiscais - Ache sua nota aqui</h1>
+            </div>
+            <div class="p-4">
+              <!-- Inicio do form -->
+              <form>
+                <div class="form-group">
+                  <label for="exampleDataList" class="form-label invisible"
+                    >Nome do pagador</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Nome do pagador:"
+                  />
+                  <datalist id="datalistOptions">
+                    <option value="Maria dos Santos"> </option>
+                    <option value="José de Paula"> </option>
+                    <option value="Josefina Jesus"> </option>
+                    <option value="Mariesangela Barros"> </option>
+                  </datalist>
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="exampleDataList" class="form-label invisible"
+                    >Número de identificação da nota:</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Número de identificação da nota::"
+                  />
+                  <datalist id="datalistOptions">
+                    <option value="NSNF-2023-ABC-00123"> </option>
+                    <option value="NSNF-2023-XYZ-04567"> </option>
+                    <option value="NSNF-2023-DEF-08901"> </option>
+                    <option value="NSNF-2023-QRS-01234"> </option>
+                  </datalist>
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="exampleDataList" class="form-label invisible"
+                    >Data de emissão da nota:</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Data de emissão da nota:"
+                  />
+                  <datalist id="datalistOptions">
+                    <option value=" 15/04/2023"> </option>
+                    <option value="28/09/2023"> </option>
+                    <option value="03/12/2023"> </option>
+                    <option value="21/06/2023"> </option>
+                  </datalist>
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="exampleDataList" class="form-label invisible"
+                    >Data da cobrança:</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Data da cobrança:"
+                  />
+                  <datalist id="datalistOptions">
+                    <option value=" 20/04/2023"> </option>
+                    <option value="30/09/2023"> </option>
+                    <option value="08/12/2023"> </option>
+                    <option value="26/06/2023"> </option>
+                  </datalist>
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="exampleDataList" class="form-label invisible"
+                    >Data do pagamento:</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Data do pagamento:"
+                  />
+                  <datalist id="datalistOptions">
+                    <option value=" 25/04/2023"> </option>
+                    <option value="05/09/2023"> </option>
+                    <option value="02/12/2023"> </option>
+                    <option value="21/06/2023"> </option>
+                  </datalist>
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="exampleDataList" class="form-label invisible"
+                    >Valor da nota:</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Valor da nota:"
+                  />
+                  <datalist id="datalistOptions">
+                    <option value=" 3.000,00"> </option>
+                    <option value="2.374,98"> </option>
+                    <option value="1.283,87"> </option>
+                    <option value="509,20"> </option>
+                  </datalist>
+                </div>
+              </form>
+              <form>
+                <div class="form-group">
+                  <label for="exampleDataList" class="form-label invisible"
+                    >Status da nota:</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Status da nota:"
+                  />
+                  <datalist id="datalistOptions">
+                    <option value="Emitida"> </option>
+                    <option value="Cobrança realizada"> </option>
+                    <option value="Pagamento em atraso"> </option>
+                    <option value="Pagamento realizado"> </option>
+                  </datalist>
+                </div>
+              </form>
+              <!-- Fim do form -->
+              <!-- Inicio dos botoes -->
+              <div class="row mt-5">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <button class="btn btn-info text-black fw-semibold fs-5" type="button">Buscar Nota</button>
+                  <button class="btn btn-info text-black fw-semibold fs-5" type="button">Ver Boleto</button>
+                  <button class="btn btn-info text-black fw-semibold fs-5" type="button">Copiar Código Pix</button>
+                  
+                </div>
+              </div>
+              <!-- Fim dos botoes -->
+            </div>
+          </div>
+          <!-- Inicio do visualizador de pdf -->
+          <div class="col-md-7 pdf">
+            <div id="pdfViewer">
+              <embed src="/assets/Curriculo_Suami.pdf" type="application/pdf" width="100%" height="800px">
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--🚧 JS 🚧-->
+    <!-- jQuery ⭐-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- BootstrapJS 👾-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Header Dropdown User -->
+    <script>
+      function toggleUserDropdown() {
+        var userDropdown = document.getElementById("userDropdown");
+        userDropdown.style.display =
+          userDropdown.style.display === "none" ? "block" : "none";
+      }
+    </script>
+    <!-- Visualizador PDF -->
+      <script src="/js/pdfobject.js"></script>
+      <script>PDFObject.embed("/assets/Curriculo_Suami.pdf", "#pdfViewer");</script>
+  <script >
+  </script>
+  </body>
+</html>

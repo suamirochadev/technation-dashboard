@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dashboard Notas Fiscais - UC</title>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Dashboard feito com Bootstrap 5 e ChartJS, UI criada por mim. Baixe esse template diretamente pelo meu ko-fi e use em seus projetos futuros.
+  Dashboard desenvolvido por Suami Rocha (suamirocha.com.br) para a UC (Projeto Ficticio).
+  " />
+  <meta name="keywords"
+    content="DashboardKit, Dashboard Kit, Dashboard UI Kit, Bootstrap 5, Admin Template, Admin Dashboard, CRM, CMS, Free Bootstrap Admin Template" />
+  <meta name="author" content="Suami Rocha suamirocha.com.br" />
+
+  <!-- cdns -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+  <!-- Links Css -->
+  <link rel="stylesheet" href="/assets/css/style.css" id="main-style-link-css" />
+  <link rel="stylesheet" href="/assets/css/nav-esquerda.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- favicon icon -->
+  <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon" />
+
+  <!-- fonts css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Inicio Nav-Esquerda -->
+  <div class="area"></div>
+  <nav class="main-menu">
+    <ul>
+      <li>
+        <a href="/">
+          <img class="fa fas-2x menu-icon" src="/assets/images/favicon.svg" alt="" />
+          <span class="nav-text">
+            Visite nosso site
+          </span>
+        </a>
+      </li>
+      <li class="has-subnav">
+        <a href="/">
+          <img class="fa fa-2x menu-icon" src="/assets/images/Icons-menu/dashboard.svg" alt="" />
+          <span class="nav-text">
+            Dashboard
+          </span>
+        </a>
+      </li>
+      <li class="has-subnav">
+        <a href="/notas-fiscais.html">
+          <img class="fa fa-2x menu-icon" src="/assets/images/Icons-menu/notasFiscais.svg" alt="" />
+          <span class="nav-text">
+            Notas Fiscais
+          </span>
+        </a>
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <img class="fa fa-2x" src="/assets/images/Icons-menu/aVencer.svg" alt="" />
+          <span class="nav-text">
+            A Vencer
+          </span>
+        </a>
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <img class="fa fa-2x" src="/assets/images/Icons-menu/pagamentos.svg" alt="" />
+          <span class="nav-text">
+            Pagamentos
+          </span>
+        </a>
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <img class="fa fa-2x" src="/assets/images/Icons-menu/ajuda.svg" alt="" />
+          <span class="nav-text">
+            Ajuda
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img class="fa fa-2x" src="/assets/images/Icons-menu/historico.svg" alt="" />
+          <span class="nav-text">
+            Histórico
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- Fim Nav-Esquerda -->
+
+  <!-- Inicio Header -->
+  <header>
+    <div class="container-sm search-bar d-flex align-items-center justify-content-center">
+      <input type="text" class="search-input" placeholder="Procure sua nota fiscal aqui..." />
+      <img src="/assets/images/search/icon-search.svg" class="fa-search" alt="Lupa" />
+    </div>
+    <div class="brand-logo">
+      <img src="/assets/images/favicon.svg" alt="" />
+    </div>
+    <div class="user-menu">
+      <span class="alerta"> </span>
+      <span class="ping"></span>
+      <i class="fas fa-bell notification-icon"></i>
+      <div class="user-photo">
+        <img src="/assets/images/Profile.png" alt="User Photo" />
+      </div>
+      <div onclick="toggleUserDropdown()">
+        <img class="seta-baixo" src="/assets/images/menu-user/arrow-drop.svg" alt="Seta pra baixo" />
+      </div>
+      <div class="user-dropdown" id="userDropdown">
+        <a href="#">
+          <img class="icon-drop" src="/assets/images/menu-user/profile.svg" alt="" />
+          Perfil</a>
+        <a href="#">
+          <img class="icon-drop" src="/assets/images/menu-user/favorito.svg" alt="" />
+          Favorito</a>
+        <a href="#">
+          <img class="icon-drop" src="/assets/images/menu-user/configurar.svg" alt="" />
+          Configurações</a>
+        <a href="#">
+          <img class="icon-drop" src="/assets/images/menu-user/sair.svg" alt="" />
+          Sair</a>
+      </div>
+    </div>
+  </header>
+  <!-- Fim Header -->
+  <!--Inicio Conteudo Principal -->
+  <div class="content-area z-1 vh-100">
+    <!-- Primeira fileira -->
+    <div class="container-fluid z-n1">
+      <div class="row mt-4">
+      <!-- Card 1 INICIO - Notas Fiscais -->
+      <div class="container bg-black rounded-4 p-2 col-md-8 m-1 notasFiscais">
+        <div class="py-2">
+          <h1 class="titulo">Notas Fiscais</h1>
+          <h4 class="sub-titulo">Resumo das emissões</h4>
+        </div>
+        <div class="d-flex align-items-start justify-content-between row gap-1 flex-wrap p-2">
+        <!-- Inicio card 1 - Valor de notas emitidas -->
+         <div class="container-sm  bg-dark rounded-4 text-start p-1 col-md-4 notasFiscais-card">
+            <div class="container">
+              <div class="img-icon">
+                <img class="img-fluid py-1" src="/assets/images/main/escala.svg" alt="Notas emitidas" />
+              </div>
+              <h4 class="card-title">$5k</h4>
+              <p class="card-text text-wrap">Valor total de notas emitidas</p>
+              <p class="informa text-wrap">+10% em relação a ontem</p>
+            </div>
+          </div>
+          <!-- fim card 1 - Valor de notas emitidas -->
+
+          <!-- Inicio card 2 - Notas emitidas sem cobrança -->
+          <div class="container-sm  bg-dark rounded-4 text-start p-1 col-md-4 notasFiscais-card">
+            <div class="card-body">
+              <div class="img-icon">
+                <img class="img-fluid py-2" src="/assets/images/main/raio.svg" alt="Sem cobrança" />
+              </div>
+              <h4 class="card-title">$500</h4>
+              <p class="card-text text-break">Notas emitidas sem cobrança</p>
+              <span class="text-info text-break">+8% em relação a ontem</span>
+            </div>
+          </div>
+          <!-- fim card 2 - Notas emitidas sem cobrança -->
+
+          <!-- Inicio card 3 - Valor total de notas a vencer -->
+          <div class="container-sm  bg-dark rounded-4 text-start p-1 col-md-4 notasFiscais-card">
+            <div class="card-body">
+              <div class="img-icon">
+                <img class="img-fluid py-2" src="/assets/images/main/bolsa.svg" alt="A vencer" />
+              </div>
+              <h4 class="card-title">$900</h4>
+              <p class="card-text text-break">Valor total de notas a vencer</p>
+              <span class="text-danger text-break">+2% em relação a ontem</span>
+            </div>
+          </div>
+          <!-- fim card 3 - Valor total de notas a vencer -->
+          
+          <!-- Inicio card 4 - Valor total de notas a pagar -->
+          <div class="container-sm bg-dark rounded-4 text-start p-1 col-md-4 notasFiscais-card">
+            <div class="card-body">
+              <div class="img-icon">
+                <img class="img-fluid py-2" src="/assets/images/main/pago.svg" alt="Pago" />
+              </div>
+              <h4 class="card-title">$1.2k</h4>
+              <p class="card-text text-break">Valor total de notas pagas</p>
+              <span class="text-info text-break">+10% em relação a ontem</span>
+            </div>
+          </div>
+        </div>
+        <!-- fim card 4 - Valor total de notas a pagar -->
+      </div>
+      <!-- Card 1 Fim - Notas Fiscais -->
+      
+      <!-- Card 2 Inicio - CHART Notas Fiscais Vencidas -->
+      <div class="container bg-black pt-3 rounded-4 col-md-4 m-1 notasFiscaisVencidas">
+        <h1 class="text-wrap">Notas Fiscais Vencidas</h1>
+        <h2 class="py-2">Mês a Mês</p>
+          <div class="card bg-black">
+            <div id="account-chart" class="z-3 "></div>
+          </div>
+        </div>
+        <!-- Card 2 Fim - CHART Notas Fiscais Vencidas -->
+        <!-- Card 1 Fim- Notas Fiscais -->
+      </div>
+      <!-- Fim primeira fileira -->
+      <!-- Inicio segunda fileira -->
+      <div class="content-area">
+        <div class="row mt-1 align-items-center gap-1">
+
+          <!-- Card 4 Inicio - Chart Receita recebida mes a mes -->
+          <div class="container bg-black pt-3 rounded-4 col-md-8 receitaRecebida">
+            <div class="box columnbox mt-4 xaxistooltip">
+              <div id="chartLine" ></div>
+            </div>
+          </div>
+          <!-- Card 3 Inicio- Receitas Recebidas -->
+            <div class="bg-black col-md-4 rounded-4 p-2">
+              <h1 class="text-wrap py-2">Receita recebida</h1>
+              <table
+                class="table d-table text-reset table-responsive table-sm-responsive table-borderless w-100 text-start align-items-start tabelaReceitas">
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-reset">#</th>
+                    <th scope="col" class="text-reset">Mês</th>
+                    <th scope="col" class="text-reset">Valor</th>
+                    <th scope="col" class="text-reset">%</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="text-reset">01</th>
+                    <td class="text-reset">Jan</td>
+                    <td>
+                      <div class="barra">
+                        <div id="progress1" class="progress1"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="porcentagem01 text-center">
+                        46%
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="text-reset">02</th>
+                    <td class="text-reset">Fev</td>
+                    <td>
+                      <div class="barra">
+                        <div id="progress2" class="progress2"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="porcentagem02 text-center">
+                        17%
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="text-reset">03</th>
+                    <td class="text-reset">Mar</td>
+                    <td>
+                      <div class="barra">
+                        <div id="progress3" class="progress3"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="porcentagem03 text-center">
+                        19%
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="text-reset">04</th>
+                    <td class="text-reset">Abr</td>
+                    <td>
+                      <div class="barra">
+                        <div id="progress4" class="progress4"></div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="porcentagem04 text-center">
+                        29%
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Card 3 Fim- Receitas Recebidas -->
+          </div>
+          <!-- Fim segunda fileira -->
+        </div>
+      </div>
+      <!-- Inicio terceira fileira -->
+      <div class="d-flex mt-4">
+        <!-- Card 4 Inicio - Valor total Notas Vencidas -->
+        <div class="container bg-black pt-3 rounded-4 col-md-4 notasVencidas">
+          <div class="container mt-4">
+            <h2 class="text-wrap notasVencidas-titulo"> Valor Total</h1>
+            <p class="text-wrap notasVencidas-subtitulo"> Notas Vencidas</p>
+            <h1 class="text-wrap notasVencidas-titulo">$6078.76</h1>
+            <p class="text-wrap notasVencidas-subtitulo">O valor é 48% maior que no mês passado</p>
+            <div class=" outer">
+              <div id="chartDonut" class="chartDonut"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 Fim - Valor total Notas Vencidas  -->
+        <!-- Card 5 - Relatorio mensal, trimestral e anual -->
+        <div class="container bg-black  rounded-4 col-md-8 relatorio">
+          <div id="wrapper">
+            <div id="chart-area"></div>
+            <div id="chart-bar"></div>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+  <!--FIM Conteudo Principal -->
+  <!--🚧 JS 🚧-->
+  <!-- jQuery ⭐-->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- BootstrapJS 👾-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <!-- Apex Chart -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <!-- ChartJS 📊-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"
+    integrity="sha512-L0Shl7nXXzIlBSUUPpxrokqq4ojqgZFQczTYlGjzONGTDAcLremjwaWv5A+EDLnxhQzY5xUZPWLOLqYRkY0Cbw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Header Dropdown User -->
+  <script>
+    function toggleUserDropdown() {
+      var userDropdown = document.getElementById("userDropdown");
+      userDropdown.style.display =
+        userDropdown.style.display === "none" ? "block" : "none";
+    }
+  </script>
+  <!-- ChartJs Notas Fiscais Vencidas -->
+  <script>
+    $(function () {
+      $(function () {
+        var options = {
+          chart: {
+            width: 350, 
+            height: 170,
+            type: 'line',
+            stacked: false,
+          },
+          stroke: {
+            width: [0, 3],
+            curve: 'smooth'
+          },
+          plotOptions: {
+            bar: {
+              columnWidth: '90%'
+            }
+          },
+          colors: ['#FF6600', '#fff'],
+          series: [{
+            name: 'Vencidas',
+            type: 'column',
+            data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+          }, {
+            name: 'Total de Notas',
+            type: 'bar',
+            data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+          }],
+          fill: {
+            opacity: [0.85, 1],
+          },
+          labels: ['01/01/2003', '02/01/2003', '03/01/2003', '04/01/2003', '05/01/2003', '06/01/2003', '07/01/2003', '08/01/2003', '09/01/2003', '10/01/2003', '11/01/2003'],
+          markers: {
+            size: 0
+          },
+          xaxis: {
+            type: 'datetime'
+          },
+          yaxis: {
+            min: 0
+          },
+          tooltip: {
+            shared: true,
+            intersect: false,
+            y: {
+              formatter: function (y) {
+                if (typeof y !== "undefined") {
+                  return "$ " + y.toFixed(0);
+                }
+                return y;
+
+              }
+            }
+          },
+          legend: {
+            labels: {
+              useSeriesColors: false
+            },
+            markers: {
+              customHTML: [
+                function () {
+                  return ''
+                },
+                function () {
+                  return ''
+                }
+              ]
+            }
+          }
+        }
+        var chart = new ApexCharts(
+          document.querySelector("#account-chart"),
+          options
+        );
+        chart.render();
+      });
+    });
+  </script>
+  <!-- APEXJS Progress Receita recebida -->
+  <script>
+    var trigoStrength = 3;
+    var iteration = 11;
+    
+    function getRandom() {
+      var i = iteration;
+      return (
+        (Math.sin(i / trigoStrength) * (i / trigoStrength) +
+          i / trigoStrength +
+          1) *
+        (trigoStrength * 2)
+      );
+    }
+    
+    function getRangeRandom(yrange) {
+      return Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+    }
+    
+    function generateMinuteWiseTimeSeries(baseval, count, yrange) {
+      var i = 0;
+      var series = [];
+      while (i < count) {
+        var x = baseval;
+        var y =
+          (Math.sin(i / trigoStrength) * (i / trigoStrength) +
+            i / trigoStrength +
+            1) *
+          (trigoStrength * 2);
+    
+        series.push([x, y]);
+        baseval += 300000;
+        i++;
+      }
+      return series;
+    }
+    var optionsProgress1 = {
+      chart: {
+        height: 30,
+        type: "bar",
+        stacked: true,
+        sparkline: {
+          enabled: true
+        }
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          barHeight: "20%",
+          colors: {
+            backgroundBarColors: ["#40475D"]
+          }
+        }
+      },
+      colors: ["#FF6600"],
+      stroke: {
+        width: 0
+      },
+      series: [
+        {
+          data: [46]
+        }
+      ],
+      title: {
+        floating: false,
+        offsetX: 0,
+        offsetY: 0,
+      },
+      subtitle: {
+        floating: true,
+        align: "right",
+        offsetY: 0,
+        style: {
+          fontSize: "20px"
+        }
+      },
+      tooltip: {
+        enabled: false
+      },
+      xaxis: {
+        categories: ["Process 1"]
+      },
+      yaxis: {
+        max: 100
+      },
+      fill: {
+        type: "gradient",
+        gradient: {
+          inverseColors: false,
+          gradientToColors: ["#DE283B"]
+        }
+      }
+    };
+
+    var chartProgress1 = new ApexCharts(
+      document.querySelector("#progress1"),
+      optionsProgress1
+    );
+    chartProgress1.render();
+
+    var optionsProgress2 = {
+      chart: {
+        height: 30,
+        type: "bar",
+        stacked: true,
+        sparkline: {
+          enabled: true
+        }
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          barHeight: "20%",
+          colors: {
+            backgroundBarColors: ["#40475D"]
+          }
+        }
+      },
+      colors: ["#17ead9"],
+      stroke: {
+        width: 0
+      },
+      series: [
+        {
+          name: "Process 2",
+          data: [17]
+        }
+      ],
+      title: {
+        floating: true,
+        offsetX: -10,
+        offsetY: 5,
+      },
+      subtitle: {
+        floating: true,
+        align: "right",
+        offsetY: 0,
+        style: {
+          fontSize: "20px"
+        }
+      },
+      tooltip: {
+        enabled: false
+      },
+      xaxis: {
+        categories: ["Process 2"]
+      },
+      yaxis: {
+        max: 100
+      },
+      fill: {
+        type: "gradient",
+        gradient: {
+          inverseColors: false,
+          gradientToColors: ["#6078ea"]
+        }
+      }
+    };
+
+    var chartProgress2 = new ApexCharts(
+      document.querySelector("#progress2"),
+      optionsProgress2
+    );
+    chartProgress2.render();
+
+    var optionsProgress3 = {
+      chart: {
+        height: 30,
+        type: "bar",
+        stacked: true,
+        sparkline: {
+          enabled: true
+        }
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          barHeight: "20%",
+          colors: {
+            backgroundBarColors: ["#40475D"]
+          }
+        }
+      },
+      colors: ["#28AEF3"],
+      stroke: {
+        width: 0
+      },
+      series: [
+        {
+          data: [19]
+        }
+      ],
+      fill: {
+        type: "gradient",
+        gradient: {
+          gradientToColors: ["#fff"]
+        }
+      },
+      title: {
+        floating: true,
+        offsetX: -10,
+        offsetY: 5,
+      },
+      subtitle: {
+        floating: true,
+        align: "right",
+        offsetY: 0,
+        style: {
+          fontSize: "20px"
+        }
+      },
+      tooltip: {
+        enabled: false
+      },
+      xaxis: {
+        categories: ["Process 3"]
+      },
+      yaxis: {
+        max: 100
+      }
+    };
+
+    var chartProgress3 = new ApexCharts(
+      document.querySelector("#progress3"),
+      optionsProgress3
+    );
+    chartProgress3.render();
+
+    var optionsProgress4 = {
+      chart: {
+        height: 30,
+        type: "bar",
+        stacked: true,
+        sparkline: {
+          enabled: true
+        }
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          barHeight: "20%",
+          colors: {
+            backgroundBarColors: ["#40475D"]
+          }
+        }
+      },
+      colors: ["#DE283B"],
+      stroke: {
+        width: 0
+      },
+      series: [
+        {
+          data: [29]
+        }
+      ],
+      fill: {
+        type: "gradient",
+        gradient: {
+          gradientToColors: ["#fff"]
+        }
+      },
+      title: {
+        floating: true,
+        offsetX: -10,
+        offsetY: 5,
+      },
+      subtitle: {
+        floating: true,
+        align: "right",
+        offsetY: 0,
+        style: {
+          fontSize: "20px"
+        }
+      },
+      tooltip: {
+        enabled: false
+      },
+      xaxis: {
+        categories: ["Process 4"]
+      },
+      yaxis: {
+        max: 100
+      }
+    };
+
+    var chartProgress4 = new ApexCharts(
+      document.querySelector("#progress4"),
+      optionsProgress4
+    );
+    chartProgress4.render();
+
+
+    window.setInterval(function () {
+      iteration++;
+
+      var p1Data = getRangeRandom({ min: 10, max: 100 });
+      chartProgress1.updateOptions({
+        series: [
+          {
+            data: [p1Data]
+          }
+        ]
+      });
+
+      var p2Data = getRangeRandom({ min: 10, max: 100 });
+      chartProgress2.updateOptions({
+        series: [
+          {
+            data: [p2Data]
+          }
+        ]
+      });
+
+      var p3Data = getRangeRandom({ min: 10, max: 100 });
+      chartProgress3.updateOptions({
+        series: [
+          {
+            data: [p3Data]
+          }
+        ]
+      });
+      var p4Data = getRangeRandom({ min: 10, max: 100 });
+      chartProgress4.updateOptions({
+        series: [
+          {
+            data: [p4Data]
+          }
+        ]
+      });
+    }, 3000);
+  </script>
+  <!-- APEXJS - LineChart Receita recebida -->
+  <script>
+    var options = {
+      series: [
+      {
+        name: "Maiores receitas - 2023",
+        data: [28, 29, 33, 36, 32, 32]
+      },
+      {
+        name: "Menores receitas - 2023",
+        data: [12, 11, 14, 18, 17, 13]
+      }
+    ],
+      chart: {
+      height: 200,
+      type: 'line',
+      dropShadow: {
+        enabled: true,
+        color: '#000',
+        top: 18,
+        left: 7,
+        blur: 10,
+        opacity: 0.2
+      },
+      toolbar: {
+        show: false,
+      }
+    },
+    tooltip: {
+      enabled: true,
+      theme: true,
+      fixed: {
+        enabled: true,
+        position: 'topRight',
+        offsetY: -30,
+      }
+    },
+    colors: ['#17CAE5', '#DE283B'],
+    dataLabels: {
+      enabled: true,
+    },
+    stroke: {
+      curve: 'smooth'
+    },
+    title: {
+      text: 'Receitas Recebidas (Mês a mês)',
+      align: 'left',
+      offsetY: -8,
+      style: {
+        color: '#fff',
+        fontSize: '18px',
+        fontWeight: 'bold',
+        fontFamily: 'Inter',
+      }
+    },
+    grid: {
+      borderColor: '#000',
+      row: {
+        colors: ['#000', 'transparent'], // takes an array which will be repeated on columns
+        opacity: 1
+      },
+    },
+    markers: {
+      size: 1
+    },
+    xaxis: {
+      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      title: {
+        text: 'Mês'
+      }
+    },
+    yaxis: {
+      title: {
+        text: 'Valores'
+      },
+      min: 5,
+      max: 40
+    },
+    legend: {
+      position: 'top',
+      horizontalAlign: 'left',
+      floating: true,
+      offsetY: -15,
+      offsetX: -5,
+      fontSize: '10px',
+      fontFamily: 'Inter',
+      fontWeight: 500,
+      labels: {
+        colors: '#fff',
+      }
+    }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chartLine"), options);
+    chart.render();
+  </script>
+  <!-- Meio Donut chart - Valor total Notas Vencidas -->
+  <script>
+    var options2 = {
+      chart: {
+        height: 240,
+        type: "radialBar",
+      },
+      series: [80],
+      colors: ["#FF6600"],
+      plotOptions: {
+        radialBar: {
+          startAngle: -90,
+          endAngle: 90,
+          track: {
+            background: '#333',
+            startAngle: -90,
+            endAngle: 90,
+          },
+          dataLabels: {
+            name: {
+              show: false,
+            },
+            value: {
+              fontSize: "30px",
+              show: true
+            }
+          }
+        }
+      },
+      fill: {
+        type: "gradient",
+        gradient: {
+          shade: "dark",
+          type: "horizontal",
+          gradientToColors: ["#87D4F9"],
+          stops: [0, 100]
+        }
+      },
+      stroke: {
+        lineCap: "butt"
+      },
+      labels: ["Progress"]
+    };
+    
+    new ApexCharts(document.querySelector("#chartDonut"), options2).render();
+    
+  
+  </script>
+  <!-- Area Chart - Relatorio Mensal, Trimestral e Anual -->
+  <script>
+    var data = generateDayWiseTimeSeries(new Date("02 Jul 2023").getTime(), 115, {
+      min: 30,
+      max: 90
+    });
+    var options1 = {
+      chart: {
+        id: "chart2",
+        type: "area",
+        height: 150,
+        foreColor: "#ccc",
+        toolbar: {
+          autoSelected: "pan",
+          show: false
+        }
+      },
+      colors: ["#00BAEC"],
+      stroke: {
+        width: 3
+      },
+      grid: {
+        borderColor: "#555",
+        clipMarkers: false,
+        yaxis: {
+          lines: {
+            show: false
+          }
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      fill: {
+        gradient: {
+          enabled: true,
+          opacityFrom: 0.55,
+          opacityTo: 0
+        }
+      },
+      markers: {
+        size: 5,
+        colors: ["#000524"],
+        strokeColor: "#00BAEC",
+        strokeWidth: 3
+      },
+      series: [
+        {
+          data: data
+        }
+      ],
+      tooltip: {
+        theme: "dark"
+      },
+      xaxis: {
+        type: "datetime"
+      },
+      yaxis: {
+        min: 0,
+        tickAmount: 4
+      }
+    };
+    
+    var chart1 = new ApexCharts(document.querySelector("#chart-area"), options1);
+    
+    chart1.render();
+    
+    var options2 = {
+      chart: {
+        id: "chart1",
+        height: 130,
+        type: "bar",
+        foreColor: "#ccc",
+        brush: {
+          target: "chart2",
+          enabled: true
+        },
+        selection: {
+          enabled: true,
+          fill: {
+            color: "#fff",
+            opacity: 0.4
+          },
+          xaxis: {
+            min: new Date("01 Jul 2023 10:00:00").getTime(),
+            max: new Date("11 Dez 2023 10:00:00").getTime()
+          }
+        }
+      },
+      colors: ["#FF6600"],
+      series: [
+        {
+          data: data
+        }
+      ],
+      stroke: {
+        width: 2
+      },
+      grid: {
+        borderColor: "#444"
+      },
+      markers: {
+        size: 0
+      },
+      xaxis: {
+        type: "datetime",
+        tooltip: {
+          enabled: false
+        }
+      },
+      yaxis: {
+        tickAmount: 2
+      }
+    };
+    
+    var chart2 = new ApexCharts(document.querySelector("#chart-bar"), options2);
+    
+    chart2.render();
+    
+    function generateDayWiseTimeSeries(baseval, count, yrange) {
+      var i = 0;
+      var series = [];
+      while (i < count) {
+        var x = baseval;
+        var y =
+          Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+    
+        series.push([x, y]);
+        baseval += 86400000;
+        i++;
+      }
+      return series;
+    }
+    
+  </script>
+</body>
+</html>
