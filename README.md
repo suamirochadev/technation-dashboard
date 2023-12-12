@@ -1,3 +1,7 @@
 Site : [Clique aqui para ver o site](https://technation-dashboarduc-suamirocha.netlify.app/)
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmQBmSROGaypBduKGe5ff1S%2FProcesso-Seletivo-UC--%25F0%259F%25A4%258D%3Fpage-id%3D1%253A371%26type%3Ddesign%26node-id%3D302-5%26viewport%3D166%252C-3%252C0.26%26t%3Ds6cR6GYNa4pfdnn2-1%26scaling%3Dmin-zoom%26mode%3Ddesign" allowfullscreen></iframe>
+Prototipo Figma: [Veja aqui](https://www.figma.com/proto/mQBmSROGaypBduKGe5ff1S/Dashboard-UC--%F0%9F%A4%8D?page-id=1%3A371&type=design&node-id=302-5&viewport=166%2C-3%2C0.26&t=s6cR6GYNa4pfdnn2-1&scaling=scale-down-width&mode=design)
+
+Arquivo: [Moodboard UI](https://www.figma.com/file/mQBmSROGaypBduKGe5ff1S/Dashboard-UC--%F0%9F%A4%8D?type=design&node-id=1%3A8&mode=design&t=zpMR8eCk8KMiGtPS-1)
+
+![Alt text](image.png)
